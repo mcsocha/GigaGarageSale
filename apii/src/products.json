@@ -1,0 +1,111 @@
+[
+
+    {
+        "id": 1,
+        "title": "ASUS Dual NVIDIA GeForce RTX 3050 6GB OC Edition Gaming Graphics Card - PCIe 4.0, 6GB GDDR6 Memory, HDMI 2.1, DisplayPort 1.4a, 2-Slot Design, Axial-tech Fan Design, 0dB Technology, Steel Bracket",
+        "price": 100.32,
+        "image": "rtx3050.jpg",
+        "category": "GPU",
+        "descriptions": [
+            "NVIDIA Ampere Streaming Multiprocessors: The all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.",
+            "2nd Generation RT Cores: Experience 2X the throughput of 1st gen RT Cores, plus concurrent RT and shading for a whole new level of ray-tracing performance.",
+            "3rd Generation Tensor Cores: Get up to 2X the throughput with structural sparsity and advanced AI algorithms such as DLSS. These cores deliver a massive boost in game performance and all-new AI capabilities.",
+            "Axial-tech fan design features a smaller fan hub that facilitates longer blades and a barrier ring that increases downward air pressure.",
+            "A 2-slot Design maximizes compatibility and cooling efficiency for superior performance in small chassis."
+        ],
+        "rating": 4,
+        "seller": "Bob's Code Cave",
+        "available": 5
+    },
+    {
+        "id": 2,
+        "title": "CORSAIR VENGEANCE RGB DDR5 RAM 32GB (2x16GB) 6400MHz CL36-48-48-104 1.35V Intel XMP Desktop Computer Memory - Black (CMH32GX5M2B6400C36)",
+        "price": 45.23,
+        "image": "corsairVenganceDdr5.jpg",
+        "category": "RAM",
+        "descriptions": [
+            "VENGEANCE RGB DDR5 memory is designed for high-performance overclocking on the latest Intel and AMD DDR5 motherboards.",
+            "Supports Intel XMP 3.0 for easy overclocking and customization.",
+            "Custom performance PCB for superior signal quality and stability.",
+            "Aluminum heat spreader for faster heat dissipation and cooler operation.",
+            "Available in multiple colors to match your system's aesthetic."
+        ],
+        "rating": 4,
+        "seller": "Uma Hackit",
+        "available": 5
+    },
+    {
+        "id": 3,
+        "title": "G.SKILL Trident Z5 RGB Series (Intel XMP 3.0) DDR5 RAM 64GB (2x32GB) 6400MT/s CL32-39-39-102 1.40V Desktop Computer Memory UDIMM - Matte Black (F5-6400J3239G32GX2-TZ5RK)",
+        "price": 88.3,
+        "image": "tridentZ5.jpg",
+        "category": "RAM",
+        "descriptions": [
+            "Trident Z5 RGB Series, designed for Intel 700/800 Series Chipset with 13th/14th Gen Intel Core Series CPU or Intel Core Ultra 200 Series CPU",
+            "Brand: G.Skill, Series: Trident Z5 RGB, Model: F5-6400J3239G32GX2-TZ5RK",
+            "64GB kit containing 2 x 32GB modules, DDR5-6400, 288-Pin, CAS Latency CL32 (32-39-39-102) at 1.40V (Intel XMP)",
+            "ECC: No, Dual Channel Kit, Recommended Use: High Performance or Gaming Memory",
+            "Memory kits will boot at the SPD speed at default BIOS settings with compatible hardware.",
+            "For memory kits with XMP, enable XMP profile in BIOS to reach the rated potential XMP overclock speed of the memory kit, subject to the use of compatible hardware.",
+            "Reaching the rated XMP overclock speed and system stability will depend on the compatibility and capability of the motherboard and CPU used.",
+            "Do not mix memory kits. Memory kits are sold in matched kits that are designed to run together as a set. Mixing memory kits will result in stability issues or system failure."
+        ],
+        "rating": 5,
+        "seller": "Bob's Code Cave",
+        "available": 5
+    },
+    {
+        "id": 4,
+        "title": "MSI MAG B760 Tomahawk WiFi Gaming Motherboard (Supports 12th/13th/14th Gen Intel Processors, LGA 1700, DDR5, PCIe 5.0, M.2, 2.5Gbps LAN, USB 3.2 Gen2, HDMI/DP, Wi-Fi 6E, Bluetooth 5.3, ATX)",
+        "price": 67.90,
+        "image": "msiMagB570.jpg",
+        "category": "Motherboard",
+        "descriptions": [
+            "Supports 12th/13th Gen Intel Core, Pentium Gold and Celeron processors for LGA 1700 socket",
+            "Supports DDR5 Memory, up to 7000+(OC) MHz",
+            "Enhanced Power Design: 12+1+1 Duet Rail Power System, dual 8-pin CPU power connectors, Core Boost, Memory Boost",
+            "Lightning Fast Game experience: PCIe 5.0 slot, Lightning Gen 4 x4 M.2, USB 3.2 Gen 2x2",
+            "Premium Thermal Solution: Extended Heatsink Design and M.2 Shield Frozr are built for high performance system and non-stop works"
+        ],
+        "rating": 5,
+        "seller": "Uma Hackit",
+        "available": 5
+    },
+    {
+        "id": 5,
+        "title": "ASUS TUF Gaming GeForce RTX ™ 5070 12GB GDDR7 OC Edition Gaming Graphics Card (PCIe® 5.0, HDMI®/DP 2.1, 3.125-slot, Military-Grade Components, Protective PCB Coating, axial-tech Fans)",
+        "price": 229.10,
+        "image": "rtx5070.jpg",
+        "category": "GPU",
+        "descriptions": [
+            "Powered by the NVIDIA Blackwell architecture and DLSS 4",
+            "Military-grade components deliver rock-solid power and longer lifespan for ultimate durability",
+            "Protective PCB coating helps protect against short circuits caused by moisture, dust, or debris",
+            "3.125-slot design with massive fin array optimized for airflow from three Axial-tech fans",
+            "Phase-change GPU thermal pad helps ensure optimal thermal performance and longevity, outlasting traditional thermal paste for graphics cards under heavy loads",
+            "ASUS GPU Guard and bracket secure the GPU, reducing the risk of cracks and ensuring stable mounting",
+            "Auto-Extreme precision automated manufacturing helps ensure higher reliability",
+            "GPU Tweak III software provides intuitive performance tweaking, advanced thermal controls, and system monitoring"
+        ],
+        "rating": 3,
+        "seller": "Dan F",
+        "available": 5
+    },
+    {
+        "id": 6,
+        "title": "GIGABYTE X870 Eagle WIFI7 AMD AM5 LGA 1718 Motherboard, ATX, DDR5, 4X M.2, PCIe 5.0, USB4, WIFI7, 2.5GbE LAN, EZ-Latch",
+        "price": 37.30,
+        "image": "gigabyteX870.jpg",
+        "category": "Motherboard",
+        "descriptions": [
+            "AMD Socket AM5: Supports AMD Ryzen 9000 / Ryzen 8000 / Ryzen 7000 Series Processors",
+            "DDR5 Compatible: 4*DIMMs with AMD EXPO Support",
+            "Power Design: 14+2+2",
+            "Thermals: VRM and M.2 Thermal Guard",
+            "Connectivity: PCIe 5.0, 3x M.2 Slots, Dual USB4, Front and Rear USB-C"
+        ],
+        "rating": 5,
+        "seller": "Dan F",
+        "available": 5
+    }
+]
