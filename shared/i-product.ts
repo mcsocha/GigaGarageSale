@@ -1,0 +1,46 @@
+export interface IProduct {
+    /**
+     * Unique identifier for the product.
+      */
+    id: number;
+
+    /**
+     * Name of the product.
+     */
+    title: string;
+
+    /**
+     * Price of the product.
+     */
+    price: number;
+
+    /**
+     * Image URL of the product.
+     */
+    image: string;
+
+    /**
+     * Category of the product.
+     */
+    category: string;
+
+    /**
+     * List of description for the product.
+     */
+    descriptions: string[];
+
+    /**
+     * Average rating of the product. 1-5
+     */
+    rating: number;
+
+    /**
+     * Business or person marketing the product with GigaGarageSale.
+     * /
+    merchant: string;
+
+    /**
+     * Number of products available for sale.
+     */
+    available: number;
+}

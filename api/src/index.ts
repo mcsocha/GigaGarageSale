@@ -1,3 +1,6 @@
+import { IProduct } from '../../shared/i-product';
+import { IReservationRequest } from '../../shared/i-reservation-request';
+
 const express = require("express");
 const app = express();
 app.use(express.static('public'));
@@ -20,7 +23,7 @@ const portNumber = 3000;
 
 const filePath = 'src/products.json';
 
-import { IProduct } from './models/IProduct';
+
 
 let products: IProduct[] = [];
 
@@ -32,10 +35,16 @@ fs.readFile(filePath, (err, data) => {
     }
 });
 
+/**
+ * Returns a list of product details.
+ */
 app.get("/products", (req, res) => {
     return res.status(200).json(products);
 });
 
+/**
+ * Returns a product with the specified id.
+ */
 app.get("/products:id", (req, res) => {
     let id = Number.parseInt(req.params.id);
     let product = products.find(p => p.id === id);
@@ -46,7 +55,7 @@ app.get("/products:id", (req, res) => {
 });
 
 /**
- * Reserves a quantity of product for a shopping cart.
+ * Reserves or releases a quantity of product from available inventory.
  */
 app.patch("/products/reserve/:id", (req, res) => {
     let id = Number.parseInt(req.params.id);
@@ -55,37 +64,25 @@ app.patch("/products/reserve/:id", (req, res) => {
         return res.status(404).json({ message: `Product with id: ${id} not found.` })
     }
 
-    let qty: number = req.body;
-    if (req.body || (!qty || qty < 1)) {
+    let resReq: IReservationRequest = req.body;
+    let qty = Math.trunc(resReq.quantity);
+
+    if (!qty || qty < 1) {
         return res.status(400).json({ message: 'Invalid product quantity specifed for reservation.' });
     }
 
-    if (product.available < qty) {
-        return res.status(500).json({ message: 'Insufficient quantity available for reservation.' });
+    if (resReq.reserve) {
+        if (product.available < qty) {
+            return res.status(500).json({ message: 'Insufficient quantity available for reservation.' });
+        }
+        product.available -= resReq.quantity;
+    } else {
+        product.available += qty;
     }
 
-    product.available -= qty;
+    console.log(`Product ${product.id} available quantity ${(resReq.reserve ? 'reduced' : 'increased')} to ${product.available}.`);
+    return res.sendStatus(204);
 });
-
-/**
- * Releases a quantity of product back to available inventory if removed from a shopping cart.
- */
-app.patch("/products/release/:id", (req, res) => {
-    let id = Number.parseInt(req.params.id);
-    let product: IProduct = products.find(p => p.id === id);
-    if (!product) {
-        return res.status(404).json({ message: `Product with id: ${id} not found.` })
-    }
-
-    let qty: number = req.body;
-    if (req.body || (!qty || qty < 1)) {
-        return res.status(400).json({ message: 'Invalid product quantity specifed for release.' });
-    }
-
-    product.available += qty;
-});
-
-
 
 server.listen(portNumber, (req, res) => {
     console.log(`Express server running on port ${portNumber}`);
