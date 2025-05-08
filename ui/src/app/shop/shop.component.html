@@ -1,9 +1,43 @@
 <img src="/assets/banner.png" />
-
-<aside>
-    <div id="merchantFilter" *ngFor="let merchant of merchants">
-      <input type="radio" name="merchant" [value]="merchant" id="merchant" /><label [for]="merchant">{{merchant}}</label>
+<main>
+<aside class="filter">
+  <div id="clearFilters">Filters: <div><a href="#" (click)="clearFilters()">(clear)</a></div></div>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>Merchants</mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <div id="merchantFilter" *ngFor="let merchant of merchants">
+        <input type="radio" name="merchant" [value]="merchant" id="merchant" [(ngModel)]="merchantFilter" /><label [for]="merchant">{{merchant}}</label>
+      </div>
+    </ng-template>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+  <mat-expansion-panel-header>Brands</mat-expansion-panel-header>
+  <ng-template matExpansionPanelContent>
+    <div id="brandFilter" *ngFor="let brand of brands">
+      <input type="radio" name="brand" [value]="brand" id="brand" [(ngModel)]="brandFilter" /><label [for]="brand">{{brand}}</label>
     </div>
+  </ng-template>
+</mat-expansion-panel>
+<mat-expansion-panel>
+<mat-expansion-panel-header>Categories</mat-expansion-panel-header>
+<ng-template matExpansionPanelContent>
+  <div id="categoryFilter" *ngFor="let category of categories">
+    <input type="radio" name="category" [value]="category" id="category" [(ngModel)]="categoryFilter" /><label [for]="category">{{category}}</label>
+  </div>
+</ng-template>
+</mat-expansion-panel>
 </aside>
 
-
+  <section id="products">
+    <div class="product" *ngFor="let product of filteredProducts">
+        <a [routerLink]="['product', product.id]">
+          <img src="{{product.imageUrl}}" />
+        </a>
+        <a [routerLink]="['product', product.id]">{{product.title}}</a><br />
+        {{product.merchant}}<br />
+        {{product.brand}}<br />
+        {{product.category}}<br />
+        {{product.price | currency}}
+    </div>
+  </section>
+</main>

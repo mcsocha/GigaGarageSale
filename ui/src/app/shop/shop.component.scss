@@ -1,0 +1,35 @@
+.filter {
+    margin: 20px;
+    width: 200px;
+}
+
+.filter div {
+  padding-left: 10px;
+  margin-top: -1px;
+}
+
+#clearFilters {
+  display: flex;
+  margin-bottom:5px;
+}
+
+#clearFilters a {
+  font-size: .8em;
+  color: rgb(128, 128, 128);
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.product {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 5px;
+}
