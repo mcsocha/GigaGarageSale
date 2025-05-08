@@ -5,9 +5,14 @@ export interface IProduct {
     id: number;
 
     /**
-     * Name of the product.
+     * Title of the product.
      */
     title: string;
+
+    /**
+     * Full product name.
+     */
+    name: string
 
     /**
      * Price of the product.

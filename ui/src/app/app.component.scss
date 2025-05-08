@@ -1,38 +1,48 @@
 
 header {
-    display: flex;
-    background-color: rgb(221, 221, 221);
+  display: flex;
+  background-color: rgb(221, 221, 221);
 }
 
-#logo {    
-    //background-color: bisque;
-    padding: 5px;
+#logo {
+  background-color: bisque;
+  padding: 5px;
 }
 
 #logo img {
-    height: 100px;
+  height: 100px;
 }
 
 nav {
-    // background-color: cadetblue;
-    width: 200px;
-    padding-left: 140px;
-    padding-top: 45px;
-    font-size: 1.4em;
+  background-color: cadetblue;
+  width: 200px;
+  padding-left: 140px;
+  padding-top: 45px;
+  font-size: 1.4em;
 }
 
-#search {    
-    padding-top: 45px;
-    padding-left: 200px;
-    //background-color: aqua;
+#search {
+  padding-top: 25px;
+  padding-left: 200px;
 }
+
 
 #search input {
-    font-size: 1.2em;
-    margin-left: auto;
-    margin-right: auto;
-    width: 220px;
-    padding: 4px 3px 3px 33px;
-    background-image: url('/assets/search.png');
-    background-repeat: no-repeat;
+  font-size: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  padding: 4px 3px 3px 33px;
+  background-image: url('/assets/search.png');
+  background-repeat: no-repeat;
+}
+
+.cdk-overlay-pane {
+    width: 500px;
+}
+
+.mat-mdc-option.mdc-list-item {
+  align-items: center;
+  background: rgb(255 255 255 / 92%);
+  font-size: .9em;
 }

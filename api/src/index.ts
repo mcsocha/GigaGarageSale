@@ -38,14 +38,14 @@ fs.readFile(filePath, (err, data) => {
 /**
  * Returns a list of product details.
  */
-app.get("/products", (req, res) => {
+app.get("/api/products", (req, res) => {
     return res.status(200).json(products);
 });
 
 /**
  * Returns a product with the specified id.
  */
-app.get("/products:id", (req, res) => {
+app.get("/api/products:id", (req, res) => {
     let id = Number.parseInt(req.params.id);
     let product = products.find(p => p.id === id);
     if (product) {
@@ -57,7 +57,7 @@ app.get("/products:id", (req, res) => {
 /**
  * Reserves or releases a quantity of product from available inventory.
  */
-app.patch("/products/reserve/:id", (req, res) => {
+app.patch("/api/products/reserve/:id", (req, res) => {
     let id = Number.parseInt(req.params.id);
     let product: IProduct = products.find(p => p.id === id);
     if (!product) {

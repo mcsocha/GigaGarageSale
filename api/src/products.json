@@ -2,7 +2,8 @@
 
     {
         "id": 1,
-        "title": "ASUS Dual NVIDIA GeForce RTX 3050 6GB OC Edition Gaming Graphics Card - PCIe 4.0, 6GB GDDR6 Memory, HDMI 2.1, DisplayPort 1.4a, 2-Slot Design, Axial-tech Fan Design, 0dB Technology, Steel Bracket",
+        "name": "ASUS Dual NVIDIA GeForce RTX 3050 6GB OC Edition Gaming Graphics Card - PCIe 4.0, 6GB GDDR6 Memory, HDMI 2.1, DisplayPort 1.4a, 2-Slot Design, Axial-tech Fan Design, 0dB Technology, Steel Bracket",
+        "title": "ASUS Dual NVIDIA GeForce RTX 3050 6GB",
         "price": 100.32,
         "image": "/images/rtx3050.jpg",
         "category": "GPU",
@@ -19,7 +20,8 @@
     },
     {
         "id": 2,
-        "title": "CORSAIR VENGEANCE RGB DDR5 RAM 32GB (2x16GB) 6400MHz CL36-48-48-104 1.35V Intel XMP Desktop Computer Memory - Black (CMH32GX5M2B6400C36)",
+        "name": "CORSAIR VENGEANCE RGB DDR5 RAM 32GB (2x16GB) 6400MHz CL36-48-48-104 1.35V Intel XMP Desktop Computer Memory - Black (CMH32GX5M2B6400C36)",
+        "title": "CORSAIR VENGEANCE RGB DDR5 RAM 32GB",
         "price": 45.23,
         "image": "/images/corsairVenganceDdr5.jpg",
         "category": "RAM",
@@ -36,7 +38,8 @@
     },
     {
         "id": 3,
-        "title": "G.SKILL Trident Z5 RGB Series (Intel XMP 3.0) DDR5 RAM 64GB (2x32GB) 6400MT/s CL32-39-39-102 1.40V Desktop Computer Memory UDIMM - Matte Black (F5-6400J3239G32GX2-TZ5RK)",
+        "name": "G.SKILL Trident Z5 RGB Series (Intel XMP 3.0) DDR5 RAM 64GB (2x32GB) 6400MT/s CL32-39-39-102 1.40V Desktop Computer Memory UDIMM - Matte Black (F5-6400J3239G32GX2-TZ5RK)",
+        "title": "G.SKILL Trident Z5 RGB Series DDR5 RAM 64GB",
         "price": 88.3,
         "image": "/images/tridentZ5.jpg",
         "category": "RAM",
@@ -56,7 +59,8 @@
     },
     {
         "id": 4,
-        "title": "MSI MAG B760 Tomahawk WiFi Gaming Motherboard (Supports 12th/13th/14th Gen Intel Processors, LGA 1700, DDR5, PCIe 5.0, M.2, 2.5Gbps LAN, USB 3.2 Gen2, HDMI/DP, Wi-Fi 6E, Bluetooth 5.3, ATX)",
+        "name": "MSI MAG B760 Tomahawk WiFi Gaming Motherboard (Supports 12th/13th/14th Gen Intel Processors, LGA 1700, DDR5, PCIe 5.0, M.2, 2.5Gbps LAN, USB 3.2 Gen2, HDMI/DP, Wi-Fi 6E, Bluetooth 5.3, ATX)",
+        "title": "MSI MAG B760 Tomahawk WiFi Gaming Motherboard",
         "price": 67.90,
         "image": "/images/msiMagB570.jpg",
         "category": "Motherboard",
@@ -73,7 +77,8 @@
     },
     {
         "id": 5,
-        "title": "ASUS TUF Gaming GeForce RTX ™ 5070 12GB GDDR7 OC Edition Gaming Graphics Card (PCIe® 5.0, HDMI®/DP 2.1, 3.125-slot, Military-Grade Components, Protective PCB Coating, axial-tech Fans)",
+        "name": "ASUS TUF Gaming GeForce RTX ™ 5070 12GB GDDR7 OC Edition Gaming Graphics Card (PCIe® 5.0, HDMI®/DP 2.1, 3.125-slot, Military-Grade Components, Protective PCB Coating, axial-tech Fans)",
+        "title": "ASUS TUF Gaming GeForce RTX 5070 12GB GDDR7 OC Edition",
         "price": 229.10,
         "image": "/images/rtx5070.jpg",
         "category": "GPU",
@@ -93,7 +98,8 @@
     },
     {
         "id": 6,
-        "title": "GIGABYTE X870 Eagle WIFI7 AMD AM5 LGA 1718 Motherboard, ATX, DDR5, 4X M.2, PCIe 5.0, USB4, WIFI7, 2.5GbE LAN, EZ-Latch",
+        "name": "GIGABYTE X870 Eagle WIFI7 AMD AM5 LGA 1718 Motherboard, ATX, DDR5, 4X M.2, PCIe 5.0, USB4, WIFI7, 2.5GbE LAN, EZ-Latch",
+        "title": "GIGABYTE X870 Eagle WIFI7 AMD AM5 Motherboard",
         "price": 37.30,
         "image": "/images/gigabyteX870.jpg",
         "category": "Motherboard",

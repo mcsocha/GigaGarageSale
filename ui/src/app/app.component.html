@@ -8,7 +8,14 @@
   </nav>
 
   <div id="search">
-    <input id="txtSearch" type="search" placeholder="Search product" [(ngModel)]="txtSearch" />
+    <mat-form-field>
+      <input id="txtSearch" matInput type="text" placeholder="Search product" [formControl]="txtSearch" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>                   
+      </mat-autocomplete>
+    </mat-form-field>
   </div>
 </header>
 
