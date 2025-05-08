@@ -1,0 +1,19 @@
+<header>
+  <div id="logo">
+    <img src="/assets/ggs.png" />
+  </div>
+  
+  <nav>
+    <a [routerLink]="['shop']">Shop</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a [routerLink]="['about']">About</a>
+  </nav>
+
+  <div id="search">
+    <input id="txtSearch" type="search" placeholder="Search product" [(ngModel)]="txtSearch" />
+  </div>
+</header>
+
+<router-outlet />
+
+<footer>
+  &copy; 2025 GigaGarageSale. All rights reserved.
+</footer>
