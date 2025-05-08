@@ -8,11 +8,27 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    min-height: 700px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 footer {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: rgb(128, 128, 128);
+}
+
+a:active {
+  color: black;
 }

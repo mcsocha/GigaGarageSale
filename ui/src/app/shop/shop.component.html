@@ -1,9 +1,8 @@
 <img src="/assets/banner.png" />
 
 <aside>
-    <p>Filter</p>
-    <div>
-
+    <div id="merchantFilter" *ngFor="let merchant of merchants">
+      <input type="radio" name="merchant" [value]="merchant" id="merchant" /><label [for]="merchant">{{merchant}}</label>
     </div>
 </aside>
 

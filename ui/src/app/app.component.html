@@ -10,16 +10,16 @@
   <div id="search">
     <mat-form-field>
       <input id="txtSearch" matInput type="text" placeholder="Search product" [formControl]="txtSearch" [matAutocomplete]="auto">
-      <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-          {{option}}
+      <mat-autocomplete #auto="matAutocomplete" class="autocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option.title" (click)="navigateProduct(option.id)">
+          {{option.title}}
         </mat-option>                   
       </mat-autocomplete>
     </mat-form-field>
   </div>
 </header>
 
-<router-outlet />
+<router-outlet></router-outlet>
 
 <footer>
   &copy; 2025 GigaGarageSale. All rights reserved.

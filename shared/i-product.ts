@@ -10,6 +10,11 @@ export interface IProduct {
     title: string;
 
     /**
+     * Brand/manufacturer of the product.
+     */
+    brand: string;
+
+    /**
      * Full product name.
      */
     name: string
@@ -41,7 +46,7 @@ export interface IProduct {
 
     /**
      * Business or person marketing the product with GigaGarageSale.
-     * /
+     */
     merchant: string;
 
     /**

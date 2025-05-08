@@ -7,7 +7,8 @@ import { Observable } from "rxjs/internal/Observable";
 @Injectable({ providedIn: 'root' })
 export class GigaHttpClient {
 
-  readonly apiBaseUrl: string = 'http://localhost:3000/api';
+  readonly hostUrl: string = 'http://localhost:3000';
+  readonly apiBaseUrl: string = `${this.hostUrl}/api`;
 
   httpClient: HttpClient = inject(HttpClient);
   constructor() {

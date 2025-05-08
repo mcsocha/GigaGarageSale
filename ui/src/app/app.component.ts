@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { RouterOutlet, RouterModule } from '@angular/router';
+import { Component, OnInit, inject } from '@angular/core';
+import { RouterOutlet, RouterModule, Router, ActivatedRoute, Params } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { GigaHttpClient } from './shared/giga-http-client';
 import { IProduct } from '../../../shared/i-product';
+import { ShopComponent } from './shop/shop.component';
 
 
 @Component({
@@ -27,19 +28,35 @@ import { IProduct } from '../../../shared/i-product';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'GigaGarageSale';
-
   txtSearch = new FormControl('');
-  options: string[];
-  filteredOptions: Observable<string[]>;
+  options: IProduct[] = [];
+  filteredOptions: Observable<IProduct[]>;
   gigaHttpClient: GigaHttpClient = inject(GigaHttpClient);
+  router: Router = inject(Router);
 
-  constructor() {
+  public navigateProduct(id: number) {
+    this.router.navigate(['/product', id]);
+  }
 
+  private _filter(value: string): IProduct[] {
+    const filterValue = value.toLowerCase();
+
+    let retVal: IProduct[] = [];
+    for (let i = 0; i < this.options.length; i++) {
+      if (this.options[i].title.toLowerCase().includes(filterValue)) {
+        retVal.push(this.options[i]);
+      }
+    }
+
+    return retVal;
+  }
+
+  ngOnInit(): void {
     this.gigaHttpClient.getProducts().subscribe({
       next: (products: IProduct[]) => {
-        this.options = products.map(p => p.title);
+        this.options = products;
       },
       error: (err) => {
         console.error('Error fetching products:', err);
@@ -50,10 +67,11 @@ export class AppComponent {
       startWith(''),
       map(value => this._filter(value || '')),
     );
-  }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+    this.router.events.subscribe({
+      next: (params: Params) => {
+        this.txtSearch.setValue('');
+      }
+    });
   }
 }

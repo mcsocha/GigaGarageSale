@@ -45,7 +45,7 @@ app.get("/api/products", (req, res) => {
 /**
  * Returns a product with the specified id.
  */
-app.get("/api/products:id", (req, res) => {
+app.get("/api/products/:id", (req, res) => {
     let id = Number.parseInt(req.params.id);
     let product = products.find(p => p.id === id);
     if (product) {

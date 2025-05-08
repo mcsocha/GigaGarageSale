@@ -5,7 +5,6 @@ header {
 }
 
 #logo {
-  background-color: bisque;
   padding: 5px;
 }
 
@@ -14,7 +13,6 @@ header {
 }
 
 nav {
-  background-color: cadetblue;
   width: 200px;
   padding-left: 140px;
   padding-top: 45px;
@@ -28,7 +26,7 @@ nav {
 
 
 #search input {
-  font-size: 1.2em;
+  font-size: .9em;
   margin-left: auto;
   margin-right: auto;
   width: 200px;
@@ -37,12 +35,15 @@ nav {
   background-repeat: no-repeat;
 }
 
-.cdk-overlay-pane {
-    width: 500px;
+.autocomplete {
+  background-color: white;
+  font-size: .9em;
 }
 
-.mat-mdc-option.mdc-list-item {
-  align-items: center;
-  background: rgb(255 255 255 / 92%);
-  font-size: .9em;
+.mat-mdc-autocomplete-panel {
+  background-color: white;
+}
+
+mat-option:hover {
+  text-decoration: underline;
 }
