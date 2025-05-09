@@ -4,19 +4,27 @@
   </div>
   
   <nav>
-    <a [routerLink]="['shop']">Shop</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a [routerLink]="['about']">About</a>
+    <a [routerLink]="['shop']">Shop</a>
+    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a [routerLink]="['about']">About</a><br/>
+    <app-fade-out-text [text]="'Product inventory reset'"></app-fade-out-text>
   </nav>
 
   <div id="search">
-    <mat-form-field>
-      <input id="txtSearch" matInput type="text" placeholder="Search product" [formControl]="txtSearch" [matAutocomplete]="auto">
-      <mat-autocomplete #auto="matAutocomplete" class="autocomplete">
-        <mat-option *ngFor="let option of filteredOptions | async" [value]="option.title" (click)="navigateProduct(option.id)">
-          {{option.title}}
-        </mat-option>                   
-      </mat-autocomplete>
-    </mat-form-field>
+    <div id="searchIcon"></div>
+    <div>
+      <mat-form-field>
+        <input id="txtSearch" matInput type="text" placeholder="Search product" [formControl]="txtSearch" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option.title" (click)="navigateProduct(option.id)" style="font-size:9pt;background-color: white;">
+            {{option.title}}
+          </mat-option>                   
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
   </div>
+  <a [routerLink]="['/cart']"><div id="cart"></div></a>
+  <div id="numCartItems">{{cartSvc.numItems}}</div>
 </header>
 
 <router-outlet></router-outlet>

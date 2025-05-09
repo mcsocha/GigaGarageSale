@@ -35,6 +35,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+  width: 727px;
+  margin-left: 7px;
 }
 
 .product {
@@ -44,4 +46,43 @@ main {
   padding: 10px;
   border: 1px solid rgb(221, 221, 221);
   border-radius: 5px;
+  font-size: 0.8em;
+}
+
+.productTitle {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.productImageDiv {
+  height: 200px;
+  align-content: center;
+}
+
+.productImage {
+  width: 200px;
+  height: auto;
+}
+
+.productBrandMerchant {
+  font-size: 0.75em;
+  margin-bottom: 10px;
+}
+
+.productPrice {
+  font-size: 1.4em;
+  display:inline;
+  margin-top: 8px;
+}
+
+.productAvailability {
+  color: darkred;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-top: 13px;
+  margin-left: 10px;
+}
+
+a {
+  cursor: pointer
 }

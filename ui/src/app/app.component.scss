@@ -1,3 +1,4 @@
+@use '@angular/material' as mat;
 
 header {
   display: flex;
@@ -13,16 +14,22 @@ header {
 }
 
 nav {
-  width: 200px;
+  width: 225px;
   padding-left: 140px;
   padding-top: 45px;
   font-size: 1.4em;
   text-shadow: 2px 2px 2px #bbb;
 }
 
+nav app-fade-out-text {
+  margin-left: -20px;
+  font-size: .8em;
+}
+
 #search {
   padding-top: 25px;
-  padding-left: 200px;
+  padding-left: 50px;
+  display: flex;
 }
 
 
@@ -32,19 +39,40 @@ nav {
   margin-right: auto;
   width: 200px;
   padding: 4px 3px 3px 33px;
+
+}
+
+#searchIcon {
+  width: 30px;
+  height: 30px;
+  margin-top: 15px;
   background-image: url('/assets/search.png');
   background-repeat: no-repeat;
 }
 
-.autocomplete {
-  background-color: white;
-  font-size: .9em;
+#cart {
+  background-image: url('/assets/cart.png');
+  background-repeat: no-repeat;
+  align-content: center;
+  margin-left: 60px;
+  margin-top: 15px;
+  cursor: pointer;
+  height: 75px;
+  width: 75px;
 }
 
-.mat-mdc-autocomplete-panel {
-  background-color: white;
+#cart:hover {
+  background-image: url('/assets/cart-hover.png');
 }
 
-mat-option:hover {
-  text-decoration: underline;
+#numCartItems {
+  background-color:rgb(29, 176, 249);
+  border-radius: 10px;
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
 }

@@ -15,7 +15,6 @@
             "A 2-slot Design maximizes compatibility and cooling efficiency for superior performance in small chassis."
         ],
         "rating": 4,
-        "numReviews": 25,
         "merchant": "Bob's Code Cave",
         "available": 5
     },
@@ -35,7 +34,6 @@
             "Available in multiple colors to match your system's aesthetic."
         ],
         "rating": 4,
-        "numReviews": 3,
         "merchant": "Uma Hackit",
         "available": 5
     },
@@ -58,7 +56,6 @@
             "Do not mix memory kits. Memory kits are sold in matched kits that are designed to run together as a set. Mixing memory kits will result in stability issues or system failure."
         ],
         "rating": 5,
-        "numReviews": 2,
         "merchant": "Bob's Code Cave",
         "available": 5
     },
@@ -78,7 +75,6 @@
             "Premium Thermal Solution: Extended Heatsink Design and M.2 Shield Frozr are built for high performance system and non-stop works"
         ],
         "rating": 5,
-        "numReviews": 1,
         "merchant": "Uma Hackit",
         "available": 5
     },
@@ -101,7 +97,6 @@
             "GPU Tweak III software provides intuitive performance tweaking, advanced thermal controls, and system monitoring"
         ],
         "rating": 3,
-        "numReviews": 5,
         "merchant": "Dan F",
         "available": 5
     },
@@ -121,7 +116,6 @@
             "Connectivity: PCIe 5.0, 3x M.2 Slots, Dual USB4, Front and Rear USB-C"
         ],
         "rating": 5,
-        "numReviews": 12,
         "merchant": "Dan F",
         "available": 5
     }

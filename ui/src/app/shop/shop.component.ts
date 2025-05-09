@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ProductsService } from '../shared/products-service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-shop',
   imports: [
     FormsModule,
     CommonModule,
-    MatExpansionModule
+    MatExpansionModule,
+    RouterModule
   ],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss'

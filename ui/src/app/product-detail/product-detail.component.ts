@@ -6,6 +6,7 @@ import { ProductsService } from '../shared/products-service';
 import { CommonModule, CurrencyPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { StarRatingComponent } from '../star-rating/star-rating.component';
+import { ShoppingCartService } from '../shared/shopping-cart-service';
 
 @Component({
   selector: 'app-product-detail',
@@ -17,8 +18,11 @@ export class ProductDetailComponent {
 
   activatedRoute: ActivatedRoute = inject(ActivatedRoute);
   productSvc: ProductsService = inject(ProductsService);
+  cartSvc: ShoppingCartService = inject(ShoppingCartService);
 
   product: IProduct = null;
+
+  addQuantity: number = 0;
 
   constructor() {
     this.activatedRoute.params.subscribe({
@@ -41,5 +45,12 @@ export class ProductDetailComponent {
         console.error('Error fetching route params:', error);
       }
     });
+  }
+
+  addToCart(): void {
+    if (this.product.available > 0) {
+      this.product.available--;
+      this.cartSvc.addItem(this.product);
+    }
   }
 }

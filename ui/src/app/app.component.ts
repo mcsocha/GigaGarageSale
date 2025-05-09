@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet, RouterModule, Router, Params } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -10,6 +10,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { IProduct } from '../../../shared/i-product';
 import { ProductsService } from './shared/products-service';
+import { FadeOutTextComponent } from "./fade-out-text/fade-out-text.component";
+import { ShoppingCartService } from './shared/shopping-cart-service';
 
 
 @Component({
@@ -21,21 +23,22 @@ import { ProductsService } from './shared/products-service';
     MatAutocompleteModule,
     MatInputModule,
     ReactiveFormsModule,
-    CommonModule
-  ],
+    CommonModule,
+    FadeOutTextComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'GigaGarageSale';
   txtSearch = new FormControl('');
   options: IProduct[] = [];
   filteredOptions: Observable<IProduct[]>;
   router: Router = inject(Router);
   productsSvc: ProductsService = inject(ProductsService);
+  cartSvc: ShoppingCartService = inject(ShoppingCartService);
 
-  constructor() {
-
+  ngOnInit() {
     this.productsSvc.products$
       .then((products: IProduct[]) => {
         this.options = products;

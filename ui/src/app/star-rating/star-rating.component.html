@@ -2,6 +2,20 @@
   <section id="merchant">
     Merchant: {{product?.merchant}}
   </section>
-  <section id="stars" #stars>
+  <section id="stars">
+    <img *ngIf="product?.rating > 0" src="/assets/gold-star.png" class="star" />
+    <img *ngIf="product?.rating <= 0" src="/assets/empty-star.png" class="star" />
+
+    <img *ngIf="product?.rating > 1" src="/assets/gold-star.png" class="star" />
+    <img *ngIf="product?.rating <= 1" src="/assets/empty-star.png" class="star" />
+
+    <img *ngIf="product?.rating > 2" src="/assets/gold-star.png" class="star" />
+    <img *ngIf="product?.rating <= 2" src="/assets/empty-star.png" class="star" />
+
+    <img *ngIf="product?.rating > 3" src="/assets/gold-star.png" class="star" />
+    <img *ngIf="product?.rating <= 3" src="/assets/empty-star.png" class="star" />
+
+    <img *ngIf="product?.rating > 4" src="/assets/gold-star.png" class="star" />
+    <img *ngIf="product?.rating <= 4" src="/assets/empty-star.png" class="star" />
   </section>
 </main>

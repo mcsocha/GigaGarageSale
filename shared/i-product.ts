@@ -45,11 +45,6 @@ export interface IProduct {
     rating: number;
 
     /**
-     * Number of reviews for the product.
-     */
-    numReviews: number;
-
-    /**
      * Business or person marketing the product with GigaGarageSale.
      */
     merchant: string;
