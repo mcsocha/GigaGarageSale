@@ -1,9 +1,50 @@
 <img src="/assets/banner.png" />
-
-<aside>
-    <div id="merchantFilter" *ngFor="let merchant of merchants">
-      <input type="radio" name="merchant" [value]="merchant" id="merchant" /><label [for]="merchant">{{merchant}}</label>
+<main>
+  <aside class="filter">
+    <div id="filterTitle">Filters: <div id="clearFilters" (click)="clearFilters()">(clear)</div>
     </div>
-</aside>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>Merchants</mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <div id="merchantFilter" *ngFor="let merchant of merchants">
+          <input type="radio" name="filter" [value]="merchant" id="merchant" [(ngModel)]="merchantFilter" /><label
+            [for]="merchant">{{merchant}}</label>
+        </div>
+      </ng-template>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>Brands</mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <div id="brandFilter" *ngFor="let brand of brands">
+          <input type="radio" name="filter" [value]="brand" id="brand" [(ngModel)]="brandFilter" /><label
+            [for]="brand">{{brand}}</label>
+        </div>
+      </ng-template>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>Categories</mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+        <div id="categoryFilter" *ngFor="let category of categories">
+          <input type="radio" name="filter" [value]="category" id="category" [(ngModel)]="categoryFilter" /><label
+            [for]="category">{{category}}</label>
+        </div>
+      </ng-template>
+    </mat-expansion-panel>
+  </aside>
 
-
+  <section id="products">
+    <div [class]="'product'" *ngFor="let product of filteredProducts">
+      <a [routerLink]="['/product-detail', product.id]">
+        <div [class]="'productImageDiv'">
+          <img [class]="'productImage'" src="{{product.imageUrl}}" />
+        </div>
+      </a>
+      <div [class]="'productTitle'"><a [routerLink]="['/product-detail', product.id]">{{product.title}}</a></div>
+      <div [class]="'productBrandMerchant'">{{product.category}} / {{product.brand}} ({{product.merchant}})</div>
+      <div style="display:flex">      
+        <div [class]="'productPrice'">{{product.price | currency: 'USD'}}</div>
+        <div [class]="'productAvailability'" *ngIf="product.available == 0" [class]="'productAvailability'">(out of stock)</div>
+      </div>
+    </div>
+  </section>
+</main>

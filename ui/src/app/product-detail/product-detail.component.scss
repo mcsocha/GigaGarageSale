@@ -1,0 +1,95 @@
+main {
+  margin: 40px;
+  display: flex;
+}
+
+img {
+  width: 400px;
+  height: auto;
+}
+
+#details {
+    display:block;
+    padding: 25px;
+    width:auto;
+}
+
+#name {
+  margin-top: -45px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  text-shadow: 2px 2px 2px #bbb;
+}
+
+#primaryDetails {
+  display:flex;
+}
+
+#primaryDetailsAttributes {
+  display: block;
+  width: 160px;
+  font-size: .9em;
+  font-weight: 400;
+  margin-top: 25px;
+  padding-left:20px;
+}
+
+#rating {
+  width: 300px;
+  display: inline-block;
+}
+
+#brand {
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#category {
+  font-size: 1em;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+#descriptions {
+  font-size: .85em;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+#descriptions ul {
+  list-style-type:disclosure-closed;
+  padding-left: 7px;
+}
+
+#retail {
+  display: flex;
+}
+
+#price {
+  background-color: rgb(221, 221, 221);
+  border-radius: 6px;
+  display: inline-block;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+#addToCart {
+  margin-left: 55px;  
+}
+
+#addToCart button {
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#addToCart button:hover {
+  background-color: #bbb;
+}
+
+#addToCart span {
+  font-size: 16pt;
+  margin-right: 20px;
+  vertical-align: middle;
+}

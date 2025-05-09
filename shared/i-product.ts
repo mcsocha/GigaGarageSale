@@ -27,7 +27,7 @@ export interface IProduct {
     /**
      * Image URL of the product.
      */
-    image: string;
+    imageUrl: string;
 
     /**
      * Category of the product.

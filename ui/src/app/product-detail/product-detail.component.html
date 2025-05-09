@@ -1,0 +1,33 @@
+<main>
+  <section id="image">
+    <img src="{{product?.imageUrl}}" />
+  </section>
+  <section id="details">
+    <div id="name">{{product?.name}}</div>
+    <div id="primaryDetails">
+      <div id="primaryDetailsAttributes">
+        <div id="brand">Brand: {{product?.brand}}</div>
+        <div id="category">Category: {{product?.category}}</div>
+      </div>
+      <div id="rating">
+        <app-star-rating [product]="product"></app-star-rating>
+      </div>
+    </div>
+
+    <div id="descriptions">
+      <ul *ngIf="product">
+        <li *ngFor="let description of product.descriptions">
+          {{description}}
+        </li>
+      </ul>
+    </div>
+    <div id="retail">
+      <div id="price">{{product?.price | currency: 'USD'}}</div>
+      <div id="addToCart">
+        <span>Available: {{product?.available}}</span>
+        <button (click)="addToCart()">Add to cart</button>
+      </div>
+    </div>
+    
+  </section>
+</main>

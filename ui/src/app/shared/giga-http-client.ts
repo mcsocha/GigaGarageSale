@@ -1,7 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable, inject } from "@angular/core";
 import { IProduct } from "../../../../shared/i-product";
-import { IReservationRequest } from "../../../../shared/i-reservation-request";
 import { Observable } from "rxjs/internal/Observable";
 
 @Injectable({ providedIn: 'root' })
@@ -15,29 +14,25 @@ export class GigaHttpClient {
   }
 
   getProducts(): Observable<IProduct[]> {
-    let url = `${this.apiBaseUrl}/products`;
+    const url = `${this.apiBaseUrl}/products`;
     console.log(`Getting products from ${url}`);
     return this.httpClient.get<IProduct[]>(url);
   }
 
+  /**
+   * Retrieve and individual product's details
+   * @param productId 
+   * @returns 
+   */
   getProduct(productId: number): Observable<IProduct> {
     let url = `${this.apiBaseUrl}/products/${productId}`;
     console.log(`Getting product from ${url}`);
     return this.httpClient.get<IProduct>(url);
   }
 
-  /**
-   * Updates the available quantity of a product.
-   * @param productId
-   * @param quantity
-   * @param reserve True to reduce quantity, False to increase quantity.
-   * @returns
-   */
-  updateReservation(productId: number, quantity: number, reserve: boolean): Observable<void> {
-    let request: IReservationRequest = {
-      quantity: quantity,
-      reserve: reserve
-    };
-    return this.httpClient.patch<void>(`http://localhost:3000/api/products/${productId}`, request);
+  resetProducts(): Observable<void> {
+    const url = `${this.apiBaseUrl}/products/reset`;
+    console.log(`Resetting products at ${url}`);
+    return this.httpClient.post<void>(url, null);
   }
 }
