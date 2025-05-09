@@ -14,6 +14,7 @@ export class ShoppingCartService {
   }
 
   numItems: number = 0;
+  total: number = 0;
 
   addItem(product: IProduct): void {
     let item = this._cartItems.find(ci => ci.product.id === product.id);
@@ -45,12 +46,20 @@ export class ShoppingCartService {
     this.calcTotalItems();
   }
 
+  clearCart(): void {
+    this._cartItems = [];
+    this.calcTotalItems();
+  }
+
   private calcTotalItems(): void {
-    let total = 0;
+    let numItems = 0;
+    let total = 0
     for (let item of this._cartItems) {
-      total += item.quantity;
+      numItems += item.quantity;
+      total += item.product.price * item.quantity;
     }
 
-    this.numItems = total;
+    this.total = total;
+    this.numItems = numItems;
   }
 }
