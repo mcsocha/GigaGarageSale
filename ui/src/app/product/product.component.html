@@ -1,4 +1,13 @@
-<main>
-  <h1>{{title}}</h1>
-  <a href="{{imageUrl}}" target="_blank"><img src="{{imageUrl}}" /></a>
-</main>
+<div>
+  <h1>asdfasdf</h1>
+  <div class="product">
+    <a [routerLink]="['product', product.id]">
+      <img src="{{product.imageUrl}}" />
+    </a>
+    <a [routerLink]="['product', product.id]">{{product.title}}</a><br />
+    {{product.merchant}}<br />
+    {{product.brand}}<br />
+    {{product.category}}<br />
+    {{product.price}}
+  </div>
+</div>

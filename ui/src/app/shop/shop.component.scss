@@ -1,6 +1,11 @@
+main {
+  display: flex;
+}
+
 .filter {
-    margin: 20px;
-    width: 200px;
+  margin: 20px;
+  width: 200px;
+  height: 100%;
 }
 
 .filter div {
@@ -8,20 +13,27 @@
   margin-top: -1px;
 }
 
-#clearFilters {
+#filterTitle {
   display: flex;
-  margin-bottom:5px;
+  margin-bottom: 5px;
+  width: 200px;
 }
 
-#clearFilters a {
-  font-size: .8em;
+#clearFilters {
+  font-size: .9em;
   color: rgb(128, 128, 128);
+  margin-top: 1px;
+  text-decoration: underline;
+}
+
+#clearFilters:hover {
+  cursor: pointer;
+  color: rgb(190, 190, 190);
 }
 
 #products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: 20px;
 }
 

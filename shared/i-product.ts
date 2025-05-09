@@ -27,7 +27,7 @@ export interface IProduct {
     /**
      * Image URL of the product.
      */
-    image: string;
+    imageUrl: string;
 
     /**
      * Category of the product.
@@ -43,6 +43,11 @@ export interface IProduct {
      * Average rating of the product. 1-5
      */
     rating: number;
+
+    /**
+     * Number of reviews for the product.
+     */
+    numReviews: number;
 
     /**
      * Business or person marketing the product with GigaGarageSale.

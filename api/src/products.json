@@ -1,12 +1,11 @@
 [
-
     {
         "id": 1,
         "name": "ASUS Dual NVIDIA GeForce RTX 3050 6GB OC Edition Gaming Graphics Card - PCIe 4.0, 6GB GDDR6 Memory, HDMI 2.1, DisplayPort 1.4a, 2-Slot Design, Axial-tech Fan Design, 0dB Technology, Steel Bracket",
         "title": "ASUS Dual NVIDIA GeForce RTX 3050 6GB",
         "brand": "ASUS",
         "price": 100.32,
-        "image": "/images/rtx3050.jpg",
+        "imageUrl": "http://localhost:3000/images/rtx3050.jpg",
         "category": "GPU",
         "descriptions": [
             "NVIDIA Ampere Streaming Multiprocessors: The all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.",
@@ -16,6 +15,7 @@
             "A 2-slot Design maximizes compatibility and cooling efficiency for superior performance in small chassis."
         ],
         "rating": 4,
+        "numReviews": 25,
         "merchant": "Bob's Code Cave",
         "available": 5
     },
@@ -25,7 +25,7 @@
         "title": "CORSAIR VENGEANCE RGB DDR5 RAM 32GB",
         "brand": "CORSAIR",
         "price": 45.23,
-        "image": "/images/corsairVenganceDdr5.jpg",
+        "imageUrl": "http://localhost:3000/images/corsairVenganceDdr5.jpg",
         "category": "RAM",
         "descriptions": [
             "VENGEANCE RGB DDR5 memory is designed for high-performance overclocking on the latest Intel and AMD DDR5 motherboards.",
@@ -35,6 +35,7 @@
             "Available in multiple colors to match your system's aesthetic."
         ],
         "rating": 4,
+        "numReviews": 3,
         "merchant": "Uma Hackit",
         "available": 5
     },
@@ -44,7 +45,7 @@
         "title": "G.SKILL Trident Z5 RGB Series DDR5 RAM 64GB",
         "brand": "G.SKILL",
         "price": 88.3,
-        "image": "/images/tridentZ5.jpg",
+        "imageUrl": "http://localhost:3000/images/tridentZ5.jpg",
         "category": "RAM",
         "descriptions": [
             "Trident Z5 RGB Series, designed for Intel 700/800 Series Chipset with 13th/14th Gen Intel Core Series CPU or Intel Core Ultra 200 Series CPU",
@@ -57,6 +58,7 @@
             "Do not mix memory kits. Memory kits are sold in matched kits that are designed to run together as a set. Mixing memory kits will result in stability issues or system failure."
         ],
         "rating": 5,
+        "numReviews": 2,
         "merchant": "Bob's Code Cave",
         "available": 5
     },
@@ -66,7 +68,7 @@
         "title": "MSI MAG B760 Tomahawk WiFi Gaming Motherboard",
         "brand": "MSI",
         "price": 67.90,
-        "image": "/images/msiMagB570.jpg",
+        "imageUrl": "http://localhost:3000/images/msiMagB570.jpg",
         "category": "Motherboard",
         "descriptions": [
             "Supports 12th/13th Gen Intel Core, Pentium Gold and Celeron processors for LGA 1700 socket",
@@ -76,6 +78,7 @@
             "Premium Thermal Solution: Extended Heatsink Design and M.2 Shield Frozr are built for high performance system and non-stop works"
         ],
         "rating": 5,
+        "numReviews": 1,
         "merchant": "Uma Hackit",
         "available": 5
     },
@@ -85,7 +88,7 @@
         "title": "ASUS TUF Gaming GeForce RTX 5070 12GB GDDR7 OC Edition",
         "brand": "ASUS",
         "price": 229.10,
-        "image": "/images/rtx5070.jpg",
+        "imageUrl": "http://localhost:3000/images/rtx5070.jpg",
         "category": "GPU",
         "descriptions": [
             "Powered by the NVIDIA Blackwell architecture and DLSS 4",
@@ -98,6 +101,7 @@
             "GPU Tweak III software provides intuitive performance tweaking, advanced thermal controls, and system monitoring"
         ],
         "rating": 3,
+        "numReviews": 5,
         "merchant": "Dan F",
         "available": 5
     },
@@ -107,7 +111,7 @@
         "title": "GIGABYTE X870 Eagle WIFI7 AMD AM5 Motherboard",
         "brand": "GIGABYTE",
         "price": 37.30,
-        "image": "/images/gigabyteX870.jpg",
+        "imageUrl": "http://localhost:3000/images/gigabyteX870.jpg",
         "category": "Motherboard",
         "descriptions": [
             "AMD Socket AM5: Supports AMD Ryzen 9000 / Ryzen 8000 / Ryzen 7000 Series Processors",
@@ -117,6 +121,7 @@
             "Connectivity: PCIe 5.0, 3x M.2 Slots, Dual USB4, Front and Rear USB-C"
         ],
         "rating": 5,
+        "numReviews": 12,
         "merchant": "Dan F",
         "available": 5
     }

@@ -1,5 +1,5 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { RouterOutlet, RouterModule, Router, ActivatedRoute, Params } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { RouterOutlet, RouterModule, Router, Params } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
@@ -8,10 +8,8 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { GigaHttpClient } from './shared/giga-http-client';
 import { IProduct } from '../../../shared/i-product';
-import { ShopComponent } from './shop/shop.component';
+import { ProductsService } from './shared/products-service';
 
 
 @Component({
@@ -28,16 +26,39 @@ import { ShopComponent } from './shop/shop.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'GigaGarageSale';
   txtSearch = new FormControl('');
   options: IProduct[] = [];
   filteredOptions: Observable<IProduct[]>;
-  gigaHttpClient: GigaHttpClient = inject(GigaHttpClient);
   router: Router = inject(Router);
+  productsSvc: ProductsService = inject(ProductsService);
+
+  constructor() {
+
+    this.productsSvc.products$
+      .then((products: IProduct[]) => {
+        this.options = products;
+      })
+      .catch((err: any) => {
+        console.error('Could not load products.', err);
+      });
+
+    this.filteredOptions = this.txtSearch.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value || '')),
+    );
+
+    // Reset search text box when navigating to a new product
+    this.router.events.subscribe({
+      next: (params: Params) => {
+        this.txtSearch.setValue('');
+      }
+    });
+  }
 
   public navigateProduct(id: number) {
-    this.router.navigate(['/product', id]);
+    this.router.navigate(['/product-detail', id]);
   }
 
   private _filter(value: string): IProduct[] {
@@ -51,27 +72,5 @@ export class AppComponent implements OnInit {
     }
 
     return retVal;
-  }
-
-  ngOnInit(): void {
-    this.gigaHttpClient.getProducts().subscribe({
-      next: (products: IProduct[]) => {
-        this.options = products;
-      },
-      error: (err) => {
-        console.error('Error fetching products:', err);
-      }
-    })
-
-    this.filteredOptions = this.txtSearch.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value || '')),
-    );
-
-    this.router.events.subscribe({
-      next: (params: Params) => {
-        this.txtSearch.setValue('');
-      }
-    });
   }
 }

@@ -1,9 +1,9 @@
-import { Component, Input, OnInit, inject, input } from '@angular/core';
-import { GigaHttpClient } from '../shared/giga-http-client';
+import { Component, OnInit, inject } from '@angular/core';
 import { IProduct } from '../../../../shared/i-product';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ProductsService } from '../shared/products-service';
 
 @Component({
   selector: 'app-shop',
@@ -15,9 +15,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss'
 })
-export class ShopComponent implements OnInit {
+export class ShopComponent {
 
-  private gigaHttpClient: GigaHttpClient = inject(GigaHttpClient);
+  private productSvc: ProductsService = inject(ProductsService);
 
   products: IProduct[] = [];
   filteredProducts: IProduct[] = [];
@@ -56,27 +56,24 @@ export class ShopComponent implements OnInit {
     console.log(`Category filter: ${this.categoryFilter}`);
   }
 
+  constructor() {
+    this.productSvc.products$.then(products => {
+      this.products = products;
+      this.filteredProducts = products;
+
+      // make distinct lists for filter
+      this.merchants = [...new Set(this.products.map(p => p.merchant))];
+      this.brands = [...new Set(this.products.map(p => p.brand))];
+      this.categories = [...new Set(this.products.map(p => p.category))];
+    }).catch(error => {
+      console.error('Error fetching products:', error);
+    });
+  }
+
   clearFilters() {
     this.merchantFilter = '';
     this.brandFilter = '';
     this.categoryFilter = '';
     this.filteredProducts = this.products;
-  }
-
-  ngOnInit(): void {
-    this.gigaHttpClient.getProducts().subscribe({
-      next: (products: IProduct[]) => {
-        this.products = products;
-        this.filteredProducts = products;
-
-        // make distinct lists for filter
-        this.merchants = [...new Set(this.products.map(p => p.merchant))];
-        this.brands = [...new Set(this.products.map(p => p.brand))];
-        this.categories = [...new Set(this.products.map(p => p.category))];
-      },
-      error: (err) => {
-        console.error('Error fetching products:', err);
-      }
-    });
   }
 }
