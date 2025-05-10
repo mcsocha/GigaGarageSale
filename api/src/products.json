@@ -5,7 +5,7 @@
         "title": "ASUS Dual NVIDIA GeForce RTX 3050 6GB",
         "brand": "ASUS",
         "price": 100.32,
-        "imageUrl": "http://localhost:3000/images/rtx3050.jpg",
+        "imageUrl": "http://localhost:3000/images/1.jpg",
         "category": "GPU",
         "descriptions": [
             "NVIDIA Ampere Streaming Multiprocessors: The all-new Ampere SM brings 2X the FP32 throughput and improved power efficiency.",
@@ -24,7 +24,7 @@
         "title": "CORSAIR VENGEANCE RGB DDR5 RAM 32GB",
         "brand": "CORSAIR",
         "price": 45.23,
-        "imageUrl": "http://localhost:3000/images/corsairVenganceDdr5.jpg",
+        "imageUrl": "http://localhost:3000/images/2.jpg",
         "category": "RAM",
         "descriptions": [
             "VENGEANCE RGB DDR5 memory is designed for high-performance overclocking on the latest Intel and AMD DDR5 motherboards.",
@@ -43,7 +43,7 @@
         "title": "G.SKILL Trident Z5 RGB Series DDR5 RAM 64GB",
         "brand": "G.SKILL",
         "price": 88.3,
-        "imageUrl": "http://localhost:3000/images/tridentZ5.jpg",
+        "imageUrl": "http://localhost:3000/images/3.jpg",
         "category": "RAM",
         "descriptions": [
             "Trident Z5 RGB Series, designed for Intel 700/800 Series Chipset with 13th/14th Gen Intel Core Series CPU or Intel Core Ultra 200 Series CPU",
@@ -65,7 +65,7 @@
         "title": "MSI MAG B760 Tomahawk WiFi Gaming Motherboard",
         "brand": "MSI",
         "price": 67.90,
-        "imageUrl": "http://localhost:3000/images/msiMagB570.jpg",
+        "imageUrl": "http://localhost:3000/images/4.jpg",
         "category": "Motherboard",
         "descriptions": [
             "Supports 12th/13th Gen Intel Core, Pentium Gold and Celeron processors for LGA 1700 socket",
@@ -84,7 +84,7 @@
         "title": "ASUS TUF Gaming GeForce RTX 5070 12GB GDDR7 OC Edition",
         "brand": "ASUS",
         "price": 229.10,
-        "imageUrl": "http://localhost:3000/images/rtx5070.jpg",
+        "imageUrl": "http://localhost:3000/images/5.jpg",
         "category": "GPU",
         "descriptions": [
             "Powered by the NVIDIA Blackwell architecture and DLSS 4",
@@ -106,7 +106,7 @@
         "title": "GIGABYTE X870 Eagle WIFI7 AMD AM5 Motherboard",
         "brand": "GIGABYTE",
         "price": 37.30,
-        "imageUrl": "http://localhost:3000/images/gigabyteX870.jpg",
+        "imageUrl": "http://localhost:3000/images/6.jpg",
         "category": "Motherboard",
         "descriptions": [
             "AMD Socket AM5: Supports AMD Ryzen 9000 / Ryzen 8000 / Ryzen 7000 Series Processors",
@@ -118,5 +118,102 @@
         "rating": 5,
         "merchant": "Dan F",
         "available": 5
+    },
+    {
+        "id": 7,
+        "name": "PNY T1000 Professional Graphics Card 8GB DDR6 896 Cores 4 miniDP Low Profile (Bracket Included) OEM (Brown Box)",
+        "title": "PNY T1000 Graphics Card 8GB DDR6",
+        "brand": "PNY",
+        "price": 93.33,
+        "imageUrl": "http://localhost:3000/images/7.jpg",
+        "category": "GPU",
+        "descriptions": [
+            "PNY VCNT1000-8GB-PB. Graphics processor family",
+            "NVIDIA, Graphics processor: T1000",
+            "Discrete graphics card memory: 8 GB, Graphics card memory type: GDDR6",
+            "Memory bus: 128 bit. Maximum resolution: 7680 x 4320 pixels",
+            "DirectX version: 12.0, OpenGL version: 4.5",
+            "Interface type: PCI Express x16 3.0",
+            "Cooling type: Active, Number of fans: 1 fan(s)"
+        ],
+        "rating": 2,
+        "merchant": "Fyoder's Dust",
+        "available": 23
+    },
+    {
+        "id": 8,
+        "name": "Acer Predator Vesta II RGB DDR5 RAM 32GB (16GBx2) 6000MHz CL30 PC5-48000, Intel XMP 3.0 AMD Expo Compatible Computer Memory PC5-48000, Black - BL.9BWWR.327",
+        "title": "Acer Predator Vest II RGB DDR5 32GB",
+        "brand": "Acer",
+        "price": 77.8,
+        "imageUrl": "http://localhost:3000/images/8.jpg",
+        "category": "RAM",
+        "descriptions": [
+            "High speed & Low latency: Predator Vesta II RGB memory is built with high-quality, hand-screened DDR5 ICs to deliver next-level speeds up to 7200 MHz, unleashing new potential for enthusiasts.",
+            "Newest DDR Platform: By doubling the banks and the burst length--and by featuring two independent 32-bit subchannels,-- DDR5 enables faster rendering, processing, buffering than ever to satisfy the growing demands.",
+            "Stylish Metallic Heat Sink: Predator DDR5 Vesta II offers a metallic heat sink made of aluminum alloy for enhanced heat dissipation and stable performance. Provides silver and black versions, Predator Vesta II gives you the chance to create your own style.",
+            "Supporting Intel XMP 3.0 and AMD EXPO: XMP 3.0 enables factory pre-set profiles, provides users with more options for overclocking, and allows customizable user-defined profiles to be saved in the memory module via BIOS on supported motherboards. It is also compatible with the latest Intel and AMD DDR5 platforms.",
+            "Programmable RGB Lighting: Designed with a more streamlined light bar, the Predator Vesta II RGB looks sleeker and brighter than ever. It is compatible with mainstream motherboard software from ASUS, Gigabyte, ASRock and MSI. Our customizable RGB lighting lets you choose from a palette of 16.8 million colors."
+        ],
+        "rating": 3,
+        "merchant": "Bob's Code Cave",
+        "available": 9
+    },
+    {
+        "id": 9,
+        "name": "ASUS ROG Strix B650-A Gaming WiFi 6E AM5 (LGA1718) Ryzen 7000 Motherboard(12+2 Power Stages,DDR5,3xM.2 Slots,PCIe® 4.0, 2.5G LAN,WiFi 6E,USB 3.2 Gen 2x2 Type-C® Port)",
+        "title": "ASUS ROG Strix B650-A AMD Ryzen 7 Motherboard",
+        "brand": "ASUS",
+        "price": 74.3,
+        "imageUrl": "http://localhost:3000/images/9.jpg",
+        "category": "Motherboard",
+        "descriptions": [
+            "AM5 Socket: Ready for AMD Ryzen Desktop 9000*, 8000*, and 7000 Series Processors",
+            "*BIOS Update maybe required when used with AMD Ryzen Desktop 9000 and 8000 Series CPU Processors",
+            "Robust Power Solution: 12 + 2 power stages with 8 + 4 pin ProCool power connectors, high-quality alloy chokes, and durable capacitors to support multi-core processors",
+            "Optimized Thermal Design: Massive VRM heatsinks with strategically cut airflow channels and high conductivity thermal pads",
+            "Next-Gen M.2 Support: One PCIe 5.0 M.2 slot and two PCIe 4.0 M.2 slots, all with heatsinks to maximize performance"
+        ],
+        "rating": 1,
+        "merchant": "Uma Hackit",
+        "available": 65
+    },
+    {
+        "id": 10,
+        "name": "GAMEMAX 1300W Power Supply, ATX 3.0 & PCIE 5.0 Ready, 80+ Platinum Certified, Addressable RGB with 5V Motherboard Sync, 100% Japanese Capacitors, Fully Modular, RGB-1300",
+        "title": "GAMEMAX 1300W Power Supply ATX 3.0 & PCIE 5.0 Ready",
+        "brand": "GAMEMAX",
+        "price": 49.1,
+        "imageUrl": "http://localhost:3000/images/10.jpg",
+        "category": "PSU",
+        "descriptions": [
+            "80 Plus Platinum Certified: Fully Power supply 1300W with 80 Plus platinum certified, with 92% or higher efficiency under typical loads.",
+            "Stable & Safe Output: DC-DC structure, Full Bridge LLC resonance assist, 12V synchronous rectification provide stable & safe output.",
+            "ATX 3.0 & PCIe 5.0 Ready: Comes with a 12VHPWR 16pin connector to provide up to 600W for power hungry Graphics card. The power supply can sustain up to 2x total power excursion and 3x GPU power excursion, fully ready for allfuture high performing components.",
+            "Fully modular: Fully modular with all black flat cables, improve airflow and strengthen cable management.",
+            "Smart ARGB & Aura Sync: 25 smart lighting modes with Aura Sync compatibility & RGB memory function, adjust lighting effects and synchronise with other compatible hardware."
+        ],
+        "rating": 4,
+        "merchant": "Fyoder's Dust",
+        "available": 32
+    },
+    {
+        "id": 11,
+        "name": "PCCOOLER CPS YS1200 Power Supply, 1200W 80 Plus Gold Certified Fully Modular PCIe 5.1 & ATX 3.1 Gaming PSU, Wide Compatibility, 135mm FDB Fan, Full Japan Electrolytic Capacitors - 12 Year Warranty",
+        "title": "PCCOOLER CPS YS1200 Power Supply 1200W",
+        "brand": "PCCOOLER",
+        "price": 109.2,
+        "imageUrl": "http://localhost:3000/images/11.jpg",
+        "category": "PSU",
+        "descriptions": [
+            "【80 Plus Gold Certified】 Passed 80 PLUS and Cybenetics gold certification, the conversion efficiency exceeds 91% under typical load conditions, ensuring optimal power utilization and reduced energy consumption.【Notice】Please don't use the other brand cables, only use the cables come with PCCOOLER CPS PSU package.",
+            "【Fully Modular】 The fully modular power supply allows use of only the cables you need for reduced system clutter and improved air flow.",
+            "【135mm FDB FAN】 Use Fluid Dynamic Bearing (FDB) Fan to effectively reduce wear and bring long-lasting stability, taking into account outstanding heat dissipation performance and low noise performance. Supports Zero RPM Fan Mode, the fan stops at low temperature and light load.",
+            "【Intel ATX 3.1 Specification Compliant】 Designed to meet Intel ATX 3.1 specifications, our power supply features native PCIe 5.1 power connectors. Capable of handling peak power up to 2 times the total system power and 3 times the GPU power, it effortlessly meets the demands of dynamic overload performance, ensuring enhanced safety and stability.",
+            "【Efficient and Reliable Design】 Featuring Active PFC, Full-Bridge LLC Resonant Converter, Synchronous Rectification, and full Japanese 105°C electrolytic capacitors, our power supply delivers superior energy efficiency and stability, perfect for high-power graphics cards."
+        ],
+        "rating": 3,
+        "merchant": "Uma Hackit",
+        "available": 3
     }
 ]
