@@ -27,6 +27,6 @@
     </tfoot>
   </table>
   <div id="checkout" *ngIf="cartSvc.numItems > 0">
-    <button (click)="confirmationDialog()">Checkout</button>
+    <button mat-raised-button (click)="checkout()">Checkout</button>
   </div>
 </div>
