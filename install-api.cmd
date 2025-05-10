@@ -1,2 +1,2 @@
 cd api
-npm install
+npm install && timeout /t 5

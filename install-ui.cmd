@@ -1,2 +1,2 @@
 cd ui
-npm install
+npm install  && timeout /t 5
