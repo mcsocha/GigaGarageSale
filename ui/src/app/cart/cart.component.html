@@ -12,17 +12,17 @@
     </thead>
     <tbody>
       <tr *ngFor="let item of cartSvc.cartItems">
-        <td>{{ item.product.title }}</td>
-        <td>{{ item.quantity }}</td>
-        <td>{{ item.product.price | currency }}</td>
-        <td>{{ (item.product.price * item.quantity) | currency }}</td>
+        <td><a [routerLink]="['/product-detail', item.product.id]">{{item.product.title}}</a></td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.product.price | currency}}</td>
+        <td>{{(item.product.price * item.quantity) | currency}}</td>
         <td><button class="remove" (click)="cartSvc.removeItem(item.product)">Remove</button></td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
         <td colspan="3"><div id="total"><strong>Total:</strong></div></td>
-        <td colspan="2">{{ cartSvc.total | currency }}</td>
+        <td colspan="2">{{cartSvc.total | currency}}</td>
       </tr>
     </tfoot>
   </table>

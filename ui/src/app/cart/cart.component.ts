@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { ShoppingCartService } from '../shared/shopping-cart-service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
   imports: [
-    CommonModule    
+    CommonModule,
+    RouterModule
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
